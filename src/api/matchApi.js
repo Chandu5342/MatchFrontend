@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/matches";
-
+//const API_URL = "http://localhost:5000/matches";
+const API_URL = "https://matchbackend.onrender.com/matches";
 export const getMatches = async (params = {}) => {
   const res = await axios.get(API_URL, { params });
   return res.data;

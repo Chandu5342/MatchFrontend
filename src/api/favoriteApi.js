@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5000/favorites";
+//const API_URL = "https://matchbackend.onrender.com/favorites";
+const API_URL="https://matchbackend.onrender.com/favorites";
 
 export const getFavorites = async () => {
   const res = await axios.get(API_URL);
