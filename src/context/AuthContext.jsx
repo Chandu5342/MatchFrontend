@@ -11,6 +11,19 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     if (token) {
       axios.defaults.headers.common["Authorization"] = `Bearer ${token}`;
+
+      // try to restore user from token by calling /auth/me
+      (async () => {
+        try {
+          const res = await axios.get("http://localhost:5000/auth/me");
+          setUser(res.data.user);
+        } catch (err) {
+          // token may be invalid, clear it
+          setToken("");
+          localStorage.removeItem("token");
+          delete axios.defaults.headers.common["Authorization"];
+        }
+      })();
     }
   }, [token]);
 
