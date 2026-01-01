@@ -6,7 +6,7 @@ This is the frontend application for **MatchFinder** — a simple app to discove
 https://drive.google.com/file/d/13ZqCLpCBJMCvlF_V5A74QqGHFw3SbN62/view?usp=sharing
 ## Frontend Live Demo:
 https://match-frontend-eight.vercel.app/
-## Backend Repo
+## Backend Repo(Please see backend repository for backend code)
 
 Repo Link : https://github.com/Chandu5342/MatchBackend.git
 Backend Live : https://matchbackend.onrender.com
