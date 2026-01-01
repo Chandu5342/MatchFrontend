@@ -1,6 +1,13 @@
 # MatchFinder — Frontend
 
 This is the frontend application for **MatchFinder** — a simple app to discover sports matches, save favorites, and manage matches (admin-only features).
+---
+
+## Backend Repo
+
+Repo Link : https://github.com/Chandu5342/MatchBackend.git
+Backend Live : 
+---
 
 ---
 
@@ -61,6 +68,35 @@ frontend/
 | `/favorites` | Favorites | Protected |
 
 ---
+
+## API Endpoints (overview)
+
+### Auth
+
+| Method | Endpoint     | Description                    |
+|--------|--------------|--------------------------------|
+| POST   | `/auth/register` | Register new user            |
+| POST   | `/auth/login`    | Login, returns token + user  |
+| GET    | `/auth/me`       | Get user from token (protected) |
+
+### Matches
+
+| Method | Endpoint         | Description                                 | Access         |
+|--------|------------------|---------------------------------------------|----------------|
+| GET    | `/matches`       | List matches (supports `sport`, `search`)   | Authenticated  |
+| POST   | `/matches`       | Create match                                | Admin only     |
+| PUT    | `/matches/:id`   | Update match                                | Admin only     |
+| DELETE | `/matches/:id`   | Delete match                                | Admin only     |
+
+### Favorites
+
+| Method | Endpoint               | Description                     | Access        |
+|--------|------------------------|---------------------------------|---------------|
+| POST   | `/favorites/:matchId`  | Add to favorites                | Authenticated |
+| DELETE | `/favorites/:matchId`  | Remove from favorites           | Authenticated |
+
+---
+
 
 ## Environment
 
